@@ -1,0 +1,9 @@
+# A feladat: Fénymotor párbaj : Trongame
+
+Adott egy n×n elemből álló játékpálya. A két játékos a bal, illetve jobb oldal közepén indul egy-egy fénymotorral, amely egyenesen halad (rögzített időközönként) a legutoljára beállított irányba (függőlegesen, vagy vízszintesen). A motorokkal lehetőség van balra, illetve jobbra fordulni. A fénymotor mozgás közben fénycsíkot húz, ami a játék végéig megmarad.
+Az a játékos veszít, aki előbb nekiütközik a másik játékos motorjának, bármelyikük fénycsíkjának vagy a pálya szélének.
+A program biztosítson lehetőséget új játék kezdésére a pályaméret megadásával (12×12, 24×24, 36×36), valamint a játék szüneteltetésére (ekkor nem telik az idő, és nem mozognak a motorok). Ismerje fel, ha vége a játéknak, és jelenítse meg, melyik játékos győzött.
+
+# Tervezés
+
+A feladat főbb célja egy két játékos által játszható motoros játék volt ami leginkább a TRON című filmben látott fénymotor párbajra emlékeztet ezért is neveztem el a játékot Trongame-nek. Szükség van legalább 2 csomagra:  egy ami a megjelenítést és egy ami a mozgatás megvalósítását végezni.  Mivel 2 játékos mód ezért mindenképpen billentyűkkel való irányítást kell implementálni. Konstans irányba mozognak újabb gomb lenyomásáig a motorok megadott időközönként (Timer) Maga a pálya gombokból áll n*n-es alapból 12*12 ezt 12-vel léptetve megkapjuk a nagyobb pályaméreteket egészen 36*36-ig. A játéktéren a gombok 5 állapotot kell tudniuk felvenni: a motor, b motor, a motor csíkja, b motor csíkja (1,2,3,4) ezenkívül a nulla az alapállapot amikor a mezőre mehet tovább a motor. Szükség van függvényre ami a mozgatások után mindig lefrissíti a gombok tartalmát, illetve a győztes megállapításához kellenek még függvények amik képesek eldönteni, hogy ki hibázott (ütközött falnak, magába, másikba) és ezáltal eldönteni, hogy ki nyert. Mivel a játékot meg is kell tudni állítani ezért kell pause és start gomb is ami a Timer segítségével kerül megvalósításra.
