@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>510</x>
+      <y>156</y>
+      <w>204</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>'Jarmu'
+--
+-ulohely : int
+-uresulohelyek : int
+-utasok : List&lt;Utas&gt;
+-ellenorok : List&lt;Ellenor&gt;
+-tartozik_e_varoshoz : boolean
+#vezeto : Vezeto
+--
++Jarmu(ulohely : int)
++Tartozik_e_varoshoz() : boolean
++addTartozik_e_varoshoz(tartozik_e_varoshoz : boolean)
++addVezeto(vezeto : Vezeto)
++removeVezeto()
++addUtas(utas : Utas)
++removeUtas(utas : Utas)
++addEllenor(ellenor : Ellenor)
++removeEllenor(ellenor : Ellenor)
++szabadulohelyekSzama() : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>558</x>
+      <y>468</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Busz
+--
+--
++addVezeto(sofor : Vezeto)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>648</x>
+      <y>426</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Vonat
+--
+--
++addVezeto(sofor : Vezeto)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>294</x>
+      <y>246</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>'Ember'
+--
+-nev : String
+-utazike : int
+--
++Ember(nev : String)
++getNev() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>228</x>
+      <y>432</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Ellenor
+--
+--
++Ellenor(nev : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>66</x>
+      <y>432</y>
+      <w>150</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Vezeto
+--
++jogositvany : List&lt;Jarmuvek&gt;
+--
++Vezeto(nev : String)
++addJogositvany(jarmu : Jarmuvek)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>756</x>
+      <y>156</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Jarmuvek
+--
+--
++toString()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>390</x>
+      <y>432</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Utas
+--
+-van_e_jegy : int
+-van_e_berlet : boolean
+--
++Utas(nev : String)
++jegyVasarlas()
++berletVasarlas()
++jegyHozzaad(van_e_jegy : int)
++Van_e_jegy() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>66</x>
+      <y>102</y>
+      <w>150</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Orszag
+--
+-varosok : List&lt;Varos&gt;
+-tartozik_e_varoshoz : boolean
+--
++Orszag()
++addVaros(varos : Varos)
++removeVaros(varos : Varos)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>216</y>
+      <w>210</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Varos
+--
+-jarmuvek : List&lt;Jarmu&gt;
+-bevetel : int
+-tartozik_e_varoshoz : boolean
+--
++Varos()
++addBevetel(bevetel : int)
++actualBevetel()
++Tartozik_e_orszaghoz(tartozik_e_orszaghoz : boolean)
++addJarmu(jarmu : Jarmu)
++removeJarmu(jarmu : Jarmu)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>66</x>
+      <y>18</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Személyszállítás
+--
+--
++main(args : String[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>552</x>
+      <y>306</y>
+      <w>78</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>18;18;66;162</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>306</y>
+      <w>126</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>18;18;114;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>288</y>
+      <w>222</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>210;18;18;144</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>282</x>
+      <y>288</y>
+      <w>96</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>84;18;18;144</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>390</x>
+      <y>288</y>
+      <w>90</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>18;18;78;144</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>150</y>
+      <w>72</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60;18;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>30</y>
+      <w>30</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>18;72;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>114</x>
+      <y>156</y>
+      <w>30</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m2=1..n </panel_attributes>
+    <additional_attributes>18;18;18;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>426</x>
+      <y>216</y>
+      <w>96</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m2=1..n </panel_attributes>
+    <additional_attributes>18;48;84;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>120</y>
+      <w>324</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m2=1..n </panel_attributes>
+    <additional_attributes>18;18;312;66</additional_attributes>
+  </element>
+</diagram>

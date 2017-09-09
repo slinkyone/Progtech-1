@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>100</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Trongame
+--
++main(args : String[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>260</y>
+      <w>310</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>TronGameFrame
+--
+-playernumber : int
+-playernumber2 :int
+-size : int 
+-map : int[][]
+-x : int
+-x2 : int
+-y : int
+-y2 : int
+-end  : boolean
+-looser : int
+--
++logic(size : int)
++setNumber(playernumber : int)
++setNumber2(playernumber2 : int)
++getNumber() : int
++getNumber2() : int
++getLooser() : int
++getSize() : int
++getMapValue(x : int, y : int) : int
++isEnd() : boolean
++newGame()
++moveDirection(c : char, playernumber : int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>780</x>
+      <y>240</y>
+      <w>310</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>logic</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>450</x>
+      <y>240</y>
+      <w>310</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>gui</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>670</x>
+      <y>80</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>trongame</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>710</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>MapButton : extends JButton
+--
++X : int
++Y : int
+--
++MapButton(X : int, Y : int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>450</x>
+      <y>690</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>gui</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>260</y>
+      <w>310</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>TronGameFrame
+--
+-logic : logic
+-gamePanel: final JPanel
+-ImageIcon playerImg1 : ImageIcon
+-playerImg2 : ImageIcon 
+-timer : Timer
+-timerTime : int
+-gamebutton : JButton
+--
++TronGameFrame(logic : logic)
+-newGame()
++actionPerformed(ae : ActionEvent)
+-makeMapButton(i: int, j: int) : Mapbutton
+-coloring(i : int, j : int, button : MapButton)
+-refreshMap()
+-startGame(activeplayer : int)
+-makeMotion(distance : int, direction : int)
++keyPressed(e : KeyEvent)
++keyReleased(e : KeyEvent)
++keyTyped(e : KeyEvent)
++makeControl(e : KeyEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>160</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>160</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>600</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..n </panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>
